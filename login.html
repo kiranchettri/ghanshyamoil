@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Admin Login | GHANSHYAM OLI</title>
+  <link rel="stylesheet" href="css/admin.css">
+  <style>
+    body {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: #111318;
+      padding: 20px;
+    }
+    .login-card {
+      width: min(450px, 100%);
+      background: #fff;
+      padding: 36px;
+      border-radius: 12px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+    }
+    .login-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+    .login-brand span {
+      background: #ff3038;
+      color: #fff;
+      padding: 12px 14px;
+      font-weight: 800;
+      border-radius: 4px;
+    }
+    .login-brand strong {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 15px;
+      line-height: 1.25;
+    }
+    .login-brand small {
+      color: #77808f;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+    }
+    .login-card h1 {
+      font: 700 28px 'Space Grotesk', sans-serif;
+      margin: 0 0 6px;
+      color: #111318;
+    }
+    .login-card p {
+      color: #77808f;
+      font-size: 13px;
+      margin-bottom: 24px;
+    }
+    .login-field {
+      display: grid;
+      gap: 6px;
+      margin: 15px 0;
+    }
+    .login-field label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: #555c68;
+    }
+    .login-field input {
+      padding: 12px 14px;
+      border: 1px solid #dcdfe4;
+      border-radius: 6px;
+      font-size: 14px;
+      color: #111318;
+      background: #fafbfc;
+      transition: border-color 0.2s;
+    }
+    .login-field input:focus {
+      outline: none;
+      border-color: #ff3038;
+      background: #fff;
+    }
+    .login-options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 16px 0 20px;
+    }
+    .remember {
+      font-size: 13px;
+      color: #4b5563;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      user-select: none;
+    }
+    .remember input {
+      cursor: pointer;
+      width: 16px;
+      height: 16px;
+      accent-color: #ff3038;
+    }
+    .quick-fill {
+      font-size: 12px;
+      color: #ff3038;
+      background: none;
+      border: 0;
+      padding: 0;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    .login-card button.btn-submit {
+      width: 100%;
+      padding: 14px;
+      background: #ff3038;
+      color: #fff;
+      border: 0;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .login-card button.btn-submit:hover:not(:disabled) {
+      background: #e0232b;
+    }
+    .login-card button.btn-submit:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+    .error {
+      color: #d92332;
+      font-size: 12px;
+      margin: 12px 0 6px;
+      line-height: 1.4;
+      min-height: 16px;
+      font-weight: 500;
+    }
+    .demo-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      padding: 14px;
+      font-size: 12px;
+      border-radius: 8px;
+      margin-top: 22px;
+      color: #475569;
+      line-height: 1.5;
+    }
+    .demo-box strong {
+      color: #1e293b;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .demo-credentials {
+      display: inline-block;
+      background: #e2e8f0;
+      color: #0f172a;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 11px;
+    }
+    .free-plan-badge {
+      display: inline-block;
+      background: #e6f9ed;
+      color: #166534;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body data-public="true">
+  <main class="login-card">
+    <div class="login-brand">
+      <span>GO</span>
+      <div>
+        <strong>GHANSHYAM OLI</strong>
+        <small>ADMIN PANEL</small>
+      </div>
+    </div>
+    <h1>Welcome back.</h1>
+    <p>Sign in to manage your website content.</p>
+    
+    <form id="login-form">
+      <div class="login-field">
+        <label for="login-email">Email</label>
+        <input id="login-email" name="email" type="email" value="admin@ghanshyamoli.com" required autocomplete="username">
+      </div>
+      <div class="login-field">
+        <label for="login-password">Password</label>
+        <input id="login-password" name="password" type="password" value="admin123" required autocomplete="current-password">
+      </div>
+      <div class="login-options">
+        <label class="remember">
+          <input name="remember" type="checkbox" checked> Remember me
+        </label>
+        <button type="button" class="quick-fill" id="fill-demo-btn">Auto-fill Demo</button>
+      </div>
+      <div id="login-error" class="error"></div>
+      <button type="submit" class="btn-submit">LOGIN</button>
+    </form>
+
+    <div class="demo-box">
+      <span class="free-plan-badge">Firebase Spark / Free Plan</span>
+      <strong>Credentials Guide</strong>
+      Sign in with your registered Firebase account, or use the instant demo credentials:
+      <br>Email: <span class="demo-credentials">admin@ghanshyamoli.com</span>
+      <br>Password: <span class="demo-credentials">admin123</span>
+    </div>
+  </main>
+
+  <script src="js/auth.js"></script>
+  <script>
+    document.querySelector('#fill-demo-btn')?.addEventListener('click', () => {
+      const email = document.querySelector('#login-email');
+      const pass = document.querySelector('#login-password');
+      if (email) email.value = 'admin@ghanshyamoli.com';
+      if (pass) pass.value = 'admin123';
+      document.querySelector('#login-error').textContent = '';
+    });
+  </script>
+</body>
+</html>

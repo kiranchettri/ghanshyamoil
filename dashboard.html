@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Dashboard | GHANSHYAM OLI</title>
+  <link rel="stylesheet" href="css/admin.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="dashboard">
+  <div id="admin-shell"></div>
+  <main class="admin-main" id="admin-content">
+    <div class="admin-page-title">
+      <div>
+        <div class="admin-kicker">Workspace / Dashboard</div>
+        <h1>Good morning, Admin.</h1>
+        <p>Here is what's happening with your website today.</p>
+      </div>
+      <div class="page-actions">
+        <button class="admin-button outline">Last 30 days ▾</button>
+        <button class="admin-button" data-new>+ New post</button>
+      </div>
+    </div>
+
+    <section class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon">▤</div>
+        <strong id="stat-total-posts">0</strong>
+        <span>Total posts</span>
+        <em class="stat-change">+12.4%</em>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">◉</div>
+        <strong>8,492</strong>
+        <span>Total users</span>
+        <em class="stat-change">+8.2%</em>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">◈</div>
+        <strong>20</strong>
+        <span>Total courses</span>
+        <em class="stat-change">+4.1%</em>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">⌁</div>
+        <strong id="stat-total-views">0</strong>
+        <span>Total views</span>
+        <em class="stat-change">+18.6%</em>
+      </div>
+    </section>
+
+    <div class="dashboard-grid">
+      <section class="admin-card">
+        <div class="admin-card-header">
+          <h2>Website visitors</h2>
+          <span>Last 30 days ▾</span>
+        </div>
+        <div class="chart">
+          <svg viewBox="0 0 600 190" preserveAspectRatio="none">
+            <path class="chart-grid" d="M0 35h600M0 80h600M0 125h600M0 170h600"/>
+            <path d="M0 145 C45 130 70 150 110 118 S175 90 220 118 S275 80 320 102 S380 42 420 77 S480 55 520 78 S570 30 600 48"/>
+          </svg>
+        </div>
+      </section>
+      <section class="admin-card">
+        <div class="admin-card-header">
+          <h2>Traffic sources</h2>
+          <span>Today</span>
+        </div>
+        <div class="donut-demo">
+          <div class="donut-ring"></div>
+          <div>
+            <strong>12,482</strong>
+            <small>visitors</small>
+          </div>
+        </div>
+        <div class="legend">
+          <span><i></i>Google 48%</span>
+          <span><i></i>Direct 28%</span>
+          <span><i></i>Social 24%</span>
+        </div>
+      </section>
+    </div>
+
+    <div class="dashboard-grid" id="dashboard-recent-grid">
+      <!-- Recent posts and live activity rendered by dashboard.js -->
+    </div>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
